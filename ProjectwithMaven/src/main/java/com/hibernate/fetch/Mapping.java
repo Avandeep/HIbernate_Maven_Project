@@ -14,21 +14,21 @@ public class Mapping {
 		// TODO Auto-generated method stub
 		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 
-	/*	Question q1 = new Question();
-		q1.setQuestionId(111);
+		Question q1 = new Question();
+		q1.setQuestionId(100);
 		q1.setQuestion("java ?");
 		
 
 		Answer a1 = new Answer();
-		a1.setAnswerId(112);
+		a1.setAnswerId(101);
 		a1.setAnswer("Programming Language");
 		
 		Answer a2 = new Answer();
-		a2.setAnswerId(113);
+		a2.setAnswerId(102);
 		a2.setAnswer("Used to build software applications");
 		
 		Answer a3 = new Answer();
-		a3.setAnswerId(114);
+		a3.setAnswerId(103);
 		a3.setAnswer("has oops concepts");
 		
 		List<Answer> list=new ArrayList<Answer>();
@@ -38,16 +38,18 @@ public class Mapping {
 		
 		q1.setAnswers(list);
 		
-*/
+		a1.setQuestion(q1);
+		a2.setQuestion(q1);
+		a3.setQuestion(q1);
 		
 		
 		Session session=factory.openSession();
 		Transaction tx=session.beginTransaction();
 		
-	//session.save(q1);
-	//session.save(a1);
-	//session.save(a2);
-	//session.save(a3);
+	session.save(q1);
+	session.save(a1);
+	session.save(a2);
+	session.save(a3);
 		
 		tx.commit();
 		

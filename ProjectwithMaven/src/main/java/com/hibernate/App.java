@@ -19,7 +19,7 @@ public class App {
 		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 
 		Student st = new Student();
-		st.setId(100);
+		st.setId(101);
 		st.setName("Avan");
 		st.setCity("Kota");
 		

@@ -6,17 +6,17 @@ import java.util.List;
 
 import javax.persistence.*;
 
-@Entity(name="Question_m2o")
-public class Question {
+@Entity(name="Question_m2o_o2m")
+public class Question_m2o_o2m {
 	@Id
 	@Column(name="question_id")
 	private int questionId;
 	private String question;
 	
-	@OneToMany(mappedBy="question")
-	private List<Answer> answers;
+	@OneToMany(mappedBy="question",cascade=CascadeType.ALL)
+	private List<Answer_m2o_o2m> answers;
 	
-	public Question() {
+	public Question_m2o_o2m() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -34,15 +34,15 @@ public class Question {
 		this.question = question;
 	}
 
-	public List<Answer> getAnswers() {
+	public List<Answer_m2o_o2m> getAnswers() {
 		return answers;
 	}
 
-	public void setAnswers(List<Answer> answers) {
+	public void setAnswers(List<Answer_m2o_o2m> answers) {
 		this.answers = answers;
 	}
 
-	public Question(int questionId, String question, List<Answer> answers) {
+	public Question_m2o_o2m(int questionId, String question, List<Answer_m2o_o2m> answers) {
 		super();
 		this.questionId = questionId;
 		this.question = question;

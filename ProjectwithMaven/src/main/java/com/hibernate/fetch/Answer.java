@@ -2,7 +2,7 @@ package com.hibernate.fetch;
 
 import javax.persistence.*;
 
-@Entity(name="Answer_m2o")
+@Entity(name="Answer_fetch")
 public class Answer {
 	@Id
 	@Column(name="answer_id")

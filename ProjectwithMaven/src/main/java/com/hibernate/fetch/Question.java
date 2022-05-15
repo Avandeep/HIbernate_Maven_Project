@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
-@Entity(name="Question_m2o")
+@Entity(name="Question_fetch")
 public class Question {
 	@Id
 	@Column(name="question_id")
